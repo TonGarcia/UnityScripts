@@ -16,9 +16,13 @@ public class Moviment : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		// Toggle moving animation
-		if(Input.GetKey(KeyCode.W)) moviment.SetBool("moving", true);
-		if(Input.GetKeyUp(KeyCode.W)) moviment.SetBool("moving", false);
+		// Toggle forward animation
+		if(Input.GetKey(KeyCode.W)) moviment.SetBool("forward", true);
+		if(Input.GetKeyUp(KeyCode.W)) moviment.SetBool("forward", false);
+
+		// Toggle back animation
+		if(Input.GetKey(KeyCode.S)) moviment.SetBool("backward", true);
+		if(Input.GetKeyUp(KeyCode.S)) moviment.SetBool("backward", false);
 
 		// Toggle run or walking
 		if (Input.GetKeyUp (KeyCode.Slash)) {
